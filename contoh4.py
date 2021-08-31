@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import operator
 
-img = cv2.imread('colourfull_ab.jpg', -1)
+img = cv2.imread('fff.png', -1)
 cv2.imshow('Imagem:',img)
 
 color = ('b','g','r')
@@ -28,11 +28,12 @@ for channel,col in enumerate(color):
 qtdBlue = (qtdBlue/totalPixels)*100
 qtdGreen = (qtdGreen/totalPixels)*100
 qtdRed = (qtdRed/totalPixels)*100
-
+print(qtdRed)
+print(qtdGreen)
+print(qtdRed)
 qtdBlue = filter(operator, qtdBlue)
 qtdGreen = filter(operator, qtdGreen)
 qtdRed = filter(operator, qtdRed)
 
 plt.title("Red: "+str(qtdRed)+"%; Green: "+str(qtdGreen)+"%; Blue: "+str(qtdBlue)+"%")
 plt.show()
-print(qtdRed)

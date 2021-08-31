@@ -8,8 +8,9 @@ diff = 20
 boundaries = [([brown[2]-diff, brown[1]-diff, brown[0]-diff],
                [brown[2]+diff, brown[1]+diff, brown[0]+diff])]
 # in order BGR as opencv represents images as numpy arrays in reverse order
-
+print(boundaries)
 for (lower, upper) in boundaries:
+    # print(lower)
     lower = np.array(lower, dtype=np.uint8)
     upper = np.array(upper, dtype=np.uint8)
     mask = cv2.inRange(img, lower, upper)

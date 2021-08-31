@@ -13,6 +13,7 @@ def visualize_colors(cluster, centroids):
     colors = sorted([(percent, color) for (percent, color) in zip(hist, centroids)])
     start = 0
     for (percent, color) in colors:
+        print(color)
         print(color, "{:0.2f}%".format(percent * 100))
         end = start + (percent * 300)
         cv2.rectangle(rect, (int(start), 0), (int(end), 50), \
@@ -21,7 +22,7 @@ def visualize_colors(cluster, centroids):
     return rect
 
 # Load image and convert to a list of pixels
-image = cv2.imread('love-png-30869.png')
+image = cv2.imread('colorblack.png')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 reshape = image.reshape((image.shape[0] * image.shape[1], 3))
 
